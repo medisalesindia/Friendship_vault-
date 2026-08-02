@@ -26,3 +26,18 @@ document.getElementById("password").value="";
 }
 
 }
+window.onload=function(){
+
+setTimeout(function(){
+
+const splash=document.getElementById("splash");
+
+if(splash){
+
+splash.style.display="none";
+
+}
+
+},2000);
+
+}
