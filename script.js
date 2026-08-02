@@ -1,22 +1,24 @@
-function unlock() {
+function unlock(){
 
-const password = document.getElementById("password").value;
-const error = document.getElementById("error");
+const password=document.getElementById("password").value;
+const error=document.getElementById("error");
 
-if(password === "RoKo"){
+if(password==="RoKo"){
 
-error.style.color="#8dff9b";
-error.innerHTML="✅ Access Granted";
+error.style.color="#7CFFB2";
+error.innerHTML="✅ Welcome...";
+
+document.querySelector("button").innerHTML="Opening...";
 
 setTimeout(function(){
 
 window.location.href="choose.html";
 
-},1000);
+},1200);
 
 }else{
 
-error.style.color="#ffb3b3";
+error.style.color="#FF9B9B";
 error.innerHTML="❌ Wrong Password";
 
 document.getElementById("password").value="";
