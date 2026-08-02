@@ -226,3 +226,155 @@ font-size:24px;
 }
 
   }
+/* ===========================
+   FRIEND MESSAGE PAGE
+=========================== */
+
+.message-container{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px 15px;
+}
+
+.message-card{
+
+width:100%;
+max-width:750px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:25px;
+
+padding:40px 30px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+animation:fadeCard .8s ease;
+
+}
+
+.message-card h1{
+
+text-align:center;
+
+font-size:38px;
+
+color:#ffffff;
+
+margin-bottom:10px;
+
+text-shadow:0 0 15px rgba(255,255,255,.8);
+
+}
+
+.message-card h2{
+
+text-align:center;
+
+font-size:28px;
+
+color:#ffd54f;
+
+margin-bottom:25px;
+
+}
+
+.message-card p{
+
+white-space:pre-line;
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#eef3ff;
+
+margin-bottom:35px;
+
+}
+
+.back-button{
+
+display:block;
+
+text-align:center;
+
+text-decoration:none;
+
+padding:15px;
+
+background:#3b82f6;
+
+color:white;
+
+font-weight:600;
+
+border-radius:15px;
+
+transition:.3s;
+
+}
+
+.back-button:hover{
+
+background:#2563eb;
+
+transform:scale(1.03);
+
+}
+
+@keyframes fadeCard{
+
+from{
+
+opacity:0;
+
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.message-card{
+
+padding:25px 20px;
+
+}
+
+.message-card h1{
+
+font-size:30px;
+
+}
+
+.message-card h2{
+
+font-size:24px;
+
+}
+
+.message-card p{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+                      }
