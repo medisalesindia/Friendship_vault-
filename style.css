@@ -123,3 +123,106 @@ font-size:15px;
 }
 
   }
+/* ===========================
+   CHOOSE PAGE
+=========================== */
+
+.choose-container{
+width:100%;
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+text-align:center;
+}
+
+.choose-container h1{
+font-size:40px;
+color:#ffffff;
+text-shadow:0 0 15px rgba(255,255,255,.7);
+margin-bottom:10px;
+}
+
+.choose-container p{
+color:#dbe7ff;
+font-size:18px;
+margin-bottom:40px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:22px;
+}
+
+.friend-card{
+text-decoration:none;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border-radius:22px;
+padding:30px 20px;
+border:1px solid rgba(255,255,255,.15);
+transition:.35s;
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+.friend-card:hover{
+transform:translateY(-8px) scale(1.03);
+}
+
+.friend-card h2{
+font-size:28px;
+font-weight:700;
+margin-bottom:12px;
+}
+
+.friend-card span{
+font-size:16px;
+color:#ffffff;
+}
+
+/* Individual Name Colors */
+
+.red h2{
+color:#ff6b6b;
+text-shadow:0 0 12px #ff4d4d;
+}
+
+.green h2{
+color:#7dff8f;
+text-shadow:0 0 12px #33ff66;
+}
+
+.blue h2{
+color:#7cc7ff;
+text-shadow:0 0 12px #3ea6ff;
+}
+
+.purple h2{
+color:#d39bff;
+text-shadow:0 0 12px #b84dff;
+}
+
+.gold h2{
+color:#ffd95c;
+text-shadow:0 0 12px #ffd700;
+}
+
+@media(max-width:700px){
+
+.choose-container h1{
+font-size:30px;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.friend-card{
+padding:24px;
+}
+
+.friend-card h2{
+font-size:24px;
+}
+
+  }
