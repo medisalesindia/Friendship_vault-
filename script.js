@@ -1,58 +1,30 @@
 const PASSWORD = "RoKo";
 
-const button = document.getElementById("unlockBtn");
-const password = document.getElementById("password");
+function unlockVault(){
+
+const input = document.getElementById("password").value;
 const error = document.getElementById("error");
 
-button.addEventListener("click", unlock);
+if(input === PASSWORD){
 
-password.addEventListener("keypress", function(e){
-    if(e.key === "Enter"){
-        unlock();
-    }
-});
+error.style.color="#8CFF9F";
+error.innerHTML="✅ Access Granted...";
 
-function unlock(){
+setTimeout(function(){
 
-    if(password.value === PASSWORD){
+window.location.href="choose.html";
 
-        error.style.color="#22c55e";
-        error.innerHTML="🔓 Access Granted...";
+},1000);
 
-        button.innerHTML="Opening...";
-        button.disabled=true;
+}
 
-        setTimeout(function(){
+else{
 
-            window.location.href="choose.html";
+error.style.color="#ff9b9b";
+error.innerHTML="❌ Wrong Password";
 
-        },1500);
+document.getElementById("password").value="";
 
-    }
+}
 
-    else{
-
-        error.style.color="#ef4444";
-        error.innerHTML="❌ Wrong Password";
-
-        document.querySelector(".glass-card").animate([
-
-            {transform:"translateX(-8px)"},
-            {transform:"translateX(8px)"},
-            {transform:"translateX(-8px)"},
-            {transform:"translateX(8px)"},
-            {transform:"translateX(0)"}
-
-        ],{
-
-            duration:350
-
-        });
-
-        password.value="";
-
-        password.focus();
-
-    }
-
-              }
+}
