@@ -460,3 +460,42 @@ background:#3b82f6;
 color:white;
 
   }
+/* Smooth Animations */
+
+.friend-card,
+.message-card,
+.box{
+
+transition:.35s;
+
+}
+
+.friend-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.message-card:hover{
+
+transform:scale(1.01);
+
+}
+
+.box:hover{
+
+transform:scale(1.02);
+
+}
+
+button:active{
+
+transform:scale(.96);
+
+}
+
+.back-button:active{
+
+transform:scale(.96);
+
+  }
