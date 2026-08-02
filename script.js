@@ -1,14 +1,12 @@
-const PASSWORD = "RoKo";
+function unlock() {
 
-function unlockVault(){
-
-const input = document.getElementById("password").value;
+const password = document.getElementById("password").value;
 const error = document.getElementById("error");
 
-if(input === PASSWORD){
+if(password === "RoKo"){
 
-error.style.color="#8CFF9F";
-error.innerHTML="✅ Access Granted...";
+error.style.color="#8dff9b";
+error.innerHTML="✅ Access Granted";
 
 setTimeout(function(){
 
@@ -16,11 +14,9 @@ window.location.href="choose.html";
 
 },1000);
 
-}
+}else{
 
-else{
-
-error.style.color="#ff9b9b";
+error.style.color="#ffb3b3";
 error.innerHTML="❌ Wrong Password";
 
 document.getElementById("password").value="";
